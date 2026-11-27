@@ -1,0 +1,94 @@
+:root {
+  --navy: #1B1F5E;
+  --navy-light: #2F3480;
+  --yellow: #F5C842;
+  --cream: #FBF5EE;
+  --border: #ECE6DC;
+  --muted: #5B6080;
+  --tile-bg: #F6F5FB;
+  --success-bg: #D8F5E6;
+  --success-text: #0B6B3A;
+  --radius-card: 16px;
+  --radius-inner: 12px;
+  --radius-pill: 999px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --shadow-card: 0 1px 2px rgba(27,31,94,.04);
+  --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --white: #fff;
+  --warning-bg: #FFF1C2;
+  --warning-text: #594000;
+  --danger-bg: #FDE8E7;
+  --danger-border: #D84A4A;
+  --danger-text: #8A1C1C;
+  --avatar-coral: #f87171;
+  --avatar-orange: #fb923c;
+  --avatar-yellow: #facc15;
+  --avatar-green: #4ade80;
+  --avatar-blue: #60a5fa;
+  --avatar-purple: #c084fc;
+  --avatar-pink: #f472b6;
+  --shadow-menu: 0 8px 24px rgba(27,31,94,.14);
+  --shadow-modal: 0 24px 60px rgba(10,14,40,.3);
+  --overlay: rgba(10,14,40,.55);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font); background: var(--cream); color: var(--navy); }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 2px;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-pill);
+  font-size: .82rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  border: 1.5px solid var(--yellow);
+  background: var(--yellow);
+  color: var(--navy);
+}
+.btn-primary:hover:not(:disabled) { background: #E8B92F; border-color: #E8B92F; }
+
+.btn-secondary {
+  border: 1.5px solid var(--navy);
+  background: var(--white);
+  color: var(--navy);
+}
+.btn-secondary:hover:not(:disabled) { background: var(--tile-bg); }
+
+.btn-icon {
+  display: inline-grid;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--navy);
+  cursor: pointer;
+}
+.btn-icon:hover { background: var(--tile-bg); }
+
+button:disabled { cursor: not-allowed; }
