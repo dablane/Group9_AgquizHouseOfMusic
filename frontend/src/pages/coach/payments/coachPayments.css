@@ -1,0 +1,147 @@
+/* ── Stats row ── */
+.cpay__stats {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 14px; margin-bottom: 24px;
+}
+.cpay__stat {
+  background: #fff; border: 1.5px solid #e8eaf2;
+  border-radius: 12px; padding: 16px 20px;
+}
+.cpay__statlabel { font-size: .75rem; font-weight: 700; color: #8a94b8; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px; }
+.cpay__statval   { font-size: 1.4rem; font-weight: 900; color: #1c2456; letter-spacing: -.02em; }
+.cpay__statval--green { color: #065f46; }
+.cpay__statval--red   { color: #991b1b; }
+
+/* ── Sub-nav tabs ── */
+.cpay__subnav { display: flex; gap: 0; }
+.cpay__subnavtab {
+  padding: 10px 20px; border: none; background: none;
+  color: #8a94b8; font: 600 .92rem 'Inter',system-ui,sans-serif;
+  cursor: pointer; position: relative;
+  display: flex; align-items: center; gap: 7px;
+  transition: color .15s;
+}
+.cpay__subnavtab:hover { color: #1c2456; }
+.cpay__subnavtab.on { color: #1c2456; }
+.cpay__subnavtab.on::after {
+  content: ''; position: absolute; bottom: -1px; left: 0; right: 0;
+  height: 2.5px; background: #1c2456; border-radius: 2px;
+}
+.cpay__subnavbadge {
+  background: #e5484d; color: #fff; border-radius: 20px;
+  padding: 1px 7px; font-size: .7rem; font-weight: 800;
+}
+.cpay__subnavdivider { height: 1px; background: #e4e7f0; margin-bottom: 20px; }
+
+/* ── Outer / Inner table ── */
+.cpay__outer { display: flex; flex-direction: column; }
+.cpay__inner {
+  background: #f0f4ff; border: 1px solid #dde4f7;
+  border-radius: 8px; overflow: hidden;
+}
+.cpay__innerthead { background: #e8edf8; border-bottom: 1px solid #dde4f7; }
+.cpay__innerbody {
+  --cpay-row-height: 76px;
+  overflow-y: auto;
+  scrollbar-width: thin; scrollbar-color: #c5cfe8 #f0f4ff;
+}
+.cpay__innerbody::-webkit-scrollbar { width: 5px; }
+.cpay__innerbody::-webkit-scrollbar-track { background: #f0f4ff; }
+.cpay__innerbody::-webkit-scrollbar-thumb { background: #c5cfe8; border-radius: 4px; }
+.cpay__emptyrow {
+  display: flex; align-items: center; justify-content: center;
+  min-height: var(--cpay-row-height); box-sizing: border-box;
+  border-top: 1px solid #dde4f7; color: #8a94b8; font-size: .88rem;
+}
+
+/* ── Row grid: Date · Student · Lesson · Time · Amount · Status · Action ── */
+.cpay__trow {
+  display: grid;
+  grid-template-columns: 65px 1.4fr 1.1fr 1fr 90px 90px 100px;
+  align-items: center; justify-items: center; text-align: center;
+  gap: 12px; padding: 12px 18px;
+  border-top: 1px solid #dde4f7; font-size: .86rem; color: #1c2456;
+  transition: background .12s;
+}
+.cpay__paymentrow { min-height: var(--cpay-row-height); box-sizing: border-box; }
+.cpay__trow--placeholder { pointer-events: none; }
+.cpay__trow--noaction {
+  grid-template-columns: 65px minmax(140px, 1.4fr) minmax(110px, 1.1fr)
+    minmax(90px, 1fr) 90px 90px;
+}
+.cpay__trow:hover { background: #e8edf8; }
+.cpay__trow--head {
+  border-top: none; font-weight: 700; font-size: .68rem;
+  letter-spacing: .06em; text-transform: uppercase; color: #6b7494;
+  padding: 10px 18px;
+}
+.cpay__trow--head:hover { background: #e8edf8; }
+.cpay__trow b     { display: block; font-size: .86rem; font-weight: 700; color: #1c2456; }
+.cpay__trow small { display: block; color: #8a94b8; font-size: .75rem; margin-top: 1px; }
+
+/* Date chip */
+.cpay__datechip {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: #eef1fb; border: 1px solid #c5cfe8; border-radius: 8px;
+  width: 65px; box-sizing: border-box;
+  padding: 5px 6px; text-align: center; gap: 1px;
+}
+.cpay__datechip .month { font-size: .56rem; font-weight: 700; color: #8a94b8; text-transform: uppercase; letter-spacing: .06em; }
+.cpay__datechip .day   { font-size: 1.1rem; font-weight: 900; color: #1c2456; line-height: 1.1; }
+.cpay__datechip .dow   { font-size: .54rem; color: #8a94b8; font-weight: 600; text-transform: uppercase; }
+
+/* Avatar */
+.cpay__tcustomer { display: flex; align-items: center; gap: 8px; }
+.cpay__avatar { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: .66rem; color: #1c2456; flex: none; }
+
+/* Badges */
+.cpay__badge { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 7px; font-size: .75rem; font-weight: 700; border: 1.5px solid transparent; }
+.cpay__badge--paid   { background: #d1fae5; color: #065f46; border-color: #a7f3d0; }
+.cpay__badge--unpaid { background: #f0f1f7; color: #8a94b8; border-color: #e0e3ef; }
+
+/* Actions */
+.cpay__tacts { display: flex; align-items: center; justify-content: center; }
+.cpay__markbtn {
+  padding: 6px 13px; border-radius: 8px; border: 1px solid #dde1ef;
+  background: #fff; color: #1c2456; font: 600 .8rem 'Inter',sans-serif;
+  cursor: pointer; white-space: nowrap; transition: all .15s;
+}
+.cpay__markbtn:hover { background: #f3f4f9; }
+
+/* Confirm strip */
+.cpay__strip {
+  padding: 12px 18px; border-top: 1px solid #dde4f7;
+  background: #fffbe6; border-top-color: #fde68a;
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  font-size: .86rem; color: #1c2456;
+}
+.cpay__strip b     { display: block; font-weight: 700; }
+.cpay__strip small { display: block; color: #6b7494; font-size: .8rem; margin-top: 2px; }
+.cpay__stripacts { display: flex; gap: 8px; align-items: center; margin-left: auto; }
+.cpay__cancelbtn {
+  padding: 6px 14px; border-radius: 8px; border: 1px solid #dde1ef;
+  background: #fff; color: #1c2456; font: 600 .82rem 'Inter',sans-serif; cursor: pointer;
+}
+.cpay__cancelbtn:hover { background: #f3f4f9; }
+.cpay__confirmbtn {
+  padding: 6px 14px; border-radius: 8px; border: none;
+  background: #1c2456; color: #fff; font: 700 .82rem 'Inter',sans-serif; cursor: pointer;
+}
+.cpay__confirmbtn:hover:not(:disabled) { background: #28346a; }
+.cpay__confirmbtn:disabled { opacity: .5; cursor: not-allowed; }
+
+/* ── Pagination ── */
+.cpay__pagination {
+  display: flex; align-items: center; justify-content: flex-end;
+  gap: 6px; padding: 10px 2px 0; margin-top: 4px;
+}
+.cpay__paginfo { font-size: .82rem; color: #8a94b8; margin-right: auto; }
+.cpay__pagbtns { display: flex; gap: 6px; }
+.cpay__pagbtn {
+  width: 32px; height: 32px; border-radius: 7px;
+  border: 1px solid #dde1ef; background: #fff;
+  color: #1c2456; font-size: 1rem; cursor: pointer;
+  display: grid; place-items: center; transition: all .15s;
+}
+.cpay__pagbtn:hover:not(:disabled) { background: #f0f4ff; border-color: #c5cfe8; }
+.cpay__pagbtn:disabled { color: #c5cbe0; cursor: default; border-color: #eaecf4; }
