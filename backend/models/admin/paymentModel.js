@@ -1,4 +1,3 @@
-// Database queries for band payments
 const db = require('../../config/db');
 
 exports.listWithBookings = async () => {
@@ -71,7 +70,7 @@ exports.insertShares = async shares => {
   await db.execute(`INSERT INTO payment_shares (payment_id, coach_id, amount) VALUES ${marks}`, vals);
 };
 
-// Approved band bookings that have no payment yet (for the "Record a payment" dropdown)
+// Approved band bookings that have no payment yet 
 exports.unpaidBookings = async () => {
   const [rows] = await db.execute(
     `SELECT

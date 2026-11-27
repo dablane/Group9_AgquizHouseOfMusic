@@ -7,7 +7,6 @@
 .bp__muted{color:#5d6385;font-size:.85rem}
 .bp__hint{color:#5d6385;font-size:.82rem;margin:6px 0 0;font-style:italic}
 
-/* Layout — equal height both columns */
 .bp__layout { display:grid; grid-template-columns:1fr 300px; gap:22px; align-items:stretch; }
 .bp__left { display:flex; flex-direction:column; gap:20px; }
 
