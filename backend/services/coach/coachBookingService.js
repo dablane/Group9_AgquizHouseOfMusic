@@ -1,10 +1,10 @@
 const lessonModel     = require('../../models/coach/coachLessonModel');
 const rescheduleModel = require('../../models/coach/coachRescheduleModel');
+
 const studentRescheduleModel = require('../../models/student/rescheduleModel');
 const proposalModel = require('../../models/coach/coachRescheduleProposalModel');
-const scheduleRequestModel = require('../../models/coach/coachScheduleRequestModel');
 const bookService = require('../student/bookService');
-const { isFutureManilaTime, isWithinRescheduleCutoff } = require('../../utils/dateTime');
+const { isFutureManilaTime } = require('../../utils/dateTime');
 const { lessonInstruments } = require('../../utils/instruments');
 const httpError = (status, message) => Object.assign(new Error(message), { status });
 
