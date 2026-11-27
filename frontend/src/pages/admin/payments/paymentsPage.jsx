@@ -65,7 +65,7 @@ export default function PaymentsPage() {
     }));
   };
 
-  // Empty shares using coach names (for when no payment is selected)
+  // Empty shares using coach names 
   const emptyShares = bandCoaches.length > 0
     ? bandCoaches.map(c => ({ name: c.name, amount: null }))
     : Array.from({ length: 4 }, (_, i) => ({ name: `Coach ${i + 1}`, amount: null }));
