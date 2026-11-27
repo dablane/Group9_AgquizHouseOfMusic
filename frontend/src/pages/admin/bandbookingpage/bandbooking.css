@@ -1,0 +1,320 @@
+.bb h1{font-size:1.75rem;font-weight:700;color:#1c2456;margin:0}
+.bb__head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+.bb__sub{margin:4px 0 18px;color:#5d6385;font-size:.95rem}
+.bb__muted{color:#5d6385;font-size:.85rem}
+.bb__tabs{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.bb__prefillnote{background:#d1fae5;border:1px solid #6ee7b7;border-radius:9px;padding:10px 14px;font-size:.85rem;color:#065f46;font-weight:600;margin-bottom:14px;}
+.bb__tab{padding:8px 16px;border-radius:999px;border:1px solid #cfd4e6;background:#fff;color:#1c2456;font:600 .88rem 'Inter',sans-serif;cursor:pointer}
+.bb__tab.on{background:#1c2456;color:#fff;border-color:#1c2456}
+.bb__btn{padding:9px 16px;border-radius:10px;border:1px solid #cfd4e6;background:#fff;color:#1c2456;font:600 .85rem 'Inter',sans-serif;cursor:pointer}
+.bb__btn:hover:not(:disabled){background:#f3f4f8}
+.bb__btn--p{background:#1c2456;color:#fff;border-color:#1c2456}.bb__btn--p:hover:not(:disabled){background:#28346a}
+.bb__btn--d{color:#a3231a;border-color:#f0c4bf}
+.bb__btn--dr{background:#a3231a;color:#fff;border-color:#a3231a}.bb__btn--dr:hover{background:#8a1f14}
+.bb__btn:disabled{background:#dfe2f0;color:#5d6385;border-color:#dfe2f0;cursor:not-allowed}
+.bb button:focus-visible,.bb select:focus-visible,.bb input:focus-visible,.bb textarea:focus-visible{outline:2px solid #f0b429;outline-offset:2px}
+.bb__card{background:#fff;border:1px solid #e4e7f0;border-radius:14px;overflow:hidden}
+.bb__row{display:grid;grid-template-columns:1.2fr 1.2fr 1.3fr 1.4fr 1.9fr;align-items:center;gap:12px;padding:14px 22px;border-top:1px solid #e4e7f0;color:#1c2456;font-size:.9rem}
+.bb__row--head{border-top:0;background:#f7f8fc;font-weight:600;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#5d6385}
+.bb__row b{display:block;font-size:.92rem}.bb__row small{display:block;color:#5d6385;font-size:.8rem}
+.bb__small{margin-top:4px}
+.bb__acts{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}.bb__acts--left{justify-content:flex-start;margin-top:18px}
+.bb__empty{padding:24px;text-align:center;color:#5d6385;border-top:1px solid #e4e7f0}
+.bb__pill{display:inline-block;padding:3px 10px;border-radius:999px;font-weight:600;font-size:.75rem}
+.bb__pill--g{background:#e3f5ea;color:#14683a}.bb__pill--a{background:#fdf0cf;color:#7a4b00}.bb__pill--x{background:#eceef5;color:#4a5075}.bb__pill--r{background:#fde7e4;color:#9b1c12}
+.bb__strip{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 22px;border-top:1px solid #e4e7f0;color:#1c2456;font-size:.9rem}
+.bb__strip--warn{background:#fdf0cf;border-top-color:#f0d98a;justify-content:space-between}
+.bb__strip--warn small{display:block;color:#5a4310;font-size:.82rem}
+.bb__strip--grey{background:#f7f8fc}.bb__bold{font-weight:600}
+.bb__strip--red{background:#fdeceb;border-top-color:#f1bcb6;display:block}
+.bb__strip--red small{display:block;color:#5d6385;margin:2px 0 10px;font-size:.82rem}
+.bb__strip--red textarea,.bb__form input,.bb__form select{width:100%;box-sizing:border-box;padding:11px 14px;border:1px solid #cfd4e6;border-radius:10px;background:#fff;color:#1c2456;font:400 .9rem 'Inter',sans-serif}
+.bb__strip--red textarea{margin:10px 0}
+.bb__declinestrip label{display:block;color:#1c2456;font-size:.82rem;font-weight:700}
+.bb__declinestrip .bb__acts{margin-top:8px}
+.bb__chips{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:.85rem;font-weight:600}
+.bb__chip,.bb__chips button{padding:7px 14px;border-radius:999px;border:1px solid #cfd4e6;background:#fff;color:#1c2456;font:600 .82rem 'Inter',sans-serif;cursor:pointer}
+.bb__chip.on{background:#1c2456;color:#fff;border-color:#1c2456}
+.bb__alert{padding:11px 16px;border-radius:10px;background:#fde8e6;border:1px solid #f1a9a1;color:#8a1f14;font-size:.88rem;margin:0 0 14px}
+.bb__flash{padding:11px 16px;border-radius:10px;background:#e3f5ea;border:1px solid #b6e2c6;color:#14683a;font-weight:600;font-size:.9rem;margin:0 0 14px}
+/* ── Improved Add Band Booking layout ── */
+.bb__addcard {
+  background: #fff; border: 1px solid #e4e7f0;
+  border-radius: 14px; padding: 32px; width: 100%; box-sizing: border-box;
+}
+.bb__formgrid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 20px; margin-bottom: 20px;
+}
+.bb__fieldblock { display: flex; flex-direction: column; gap: 6px; }
+.bb__fieldlabel { font-size: .82rem; font-weight: 700; color: #3b3f55; }
+.bb__fieldinput {
+  width: 100%; box-sizing: border-box;
+  padding: 11px 14px; border: 1px solid #cfd4e6;
+  border-radius: 10px; background: #fff; color: #1c2456;
+  font: 400 .9rem 'Inter',sans-serif; transition: border-color .15s;
+}
+.bb__fieldinput:focus { outline: none; border-color: #f0b429; box-shadow: 0 0 0 3px rgba(240,180,41,.12); }
+.bb__fieldinput--readonly { background: #f7f8fc; color: #8a94b8; cursor: default; }
+.bb__fieldinput--textarea { resize: vertical; min-height: 80px; }
+.bb__formacts { display: flex; gap: 10px; margin-top: 22px; padding-top: 20px; border-top: 1px solid #e4e7f0; }
+
+/* ── Coach Availability inside form ── */
+.bb__availsection {
+  background: #f7f8fc; border: 1px solid #e4e7f0;
+  border-radius: 10px; padding: 18px 20px; margin-bottom: 20px;
+}
+.bb__availhead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.bb__availtitle { font-size: .88rem; font-weight: 700; color: #1c2456; }
+.bb__availtime  { font-size: .82rem; color: #5d6385; }
+.bb__availhint  { font-size: .85rem; color: #8a94b8; margin: 0; }
+.bb__availwarn  { font-size: .85rem; color: #92400e; background: #fef3c7; border-radius: 8px; padding: 10px 14px; margin: 0; }
+
+/* Coach list */
+.bb__coachlist { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; margin-bottom: 12px; }
+.bb__coachrow  { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 8px; font-size: .88rem; }
+.bb__coachrow.free { background: #f0fdf4; }
+.bb__coachrow.busy { background: #fef2f2; }
+.bb__coachdot  { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+.bb__coachdot.free { background: #22c55e; }
+.bb__coachdot.busy { background: #ef4444; }
+.bb__coachname { flex: 1; font-weight: 600; color: #1c2456; }
+.bb__coachstatus { font-size: .78rem; font-weight: 700; }
+.bb__coachrow.free .bb__coachstatus { color: #15803d; }
+.bb__coachrow.busy .bb__coachstatus { color: #b91c1c; }
+
+.bb__availok   { font-size: .82rem; font-weight: 600; color: #15803d; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 10px 14px; }
+.bb__availbusy { font-size: .82rem; color: #b91c1c; background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 10px 14px; }
+.bb__availsugg { margin-top: 10px; }
+.bb__availsugglabel { font-size: .78rem; font-weight: 700; color: #5d6385; display: block; margin-bottom: 6px; }
+
+/* Flash top — stays near top of form, auto-dismiss via JS */
+.bb__flash--top {
+  margin-bottom: 16px;
+  animation: bb-fadein .3s ease;
+}
+@keyframes bb-fadein { from { opacity:0; transform:translateY(-6px); } }
+
+/* ── Analytics-style horizontal sub-nav ── */
+.bb__subnav { display:flex; gap:0; margin-bottom:0; border-bottom:none; }
+.bb__subnavtab {
+  padding: 10px 20px; border:none; background:none;
+  color: #8a94b8; font: 600 .92rem 'Inter',sans-serif; cursor:pointer;
+  position:relative; display:flex; align-items:center; gap:7px;
+  transition: color .15s;
+}
+.bb__subnavtab:hover { color:#1c2456; }
+.bb__subnavtab.on { color:#1c2456; }
+.bb__subnavtab.on::after {
+  content:''; position:absolute; bottom:-1px; left:0; right:0;
+  height:2.5px; background:#1c2456; border-radius:2px;
+}
+.bb__subnavbadge {
+  background:#e5484d; color:#fff; border-radius:20px;
+  padding:1px 7px; font-size:.7rem; font-weight:800;
+}
+.bb__subnavdivider { height:1px; background:#e4e7f0; margin-bottom:20px; }
+
+/* ── Confirmed table: 7 columns using fr for flexible content ── */
+.bb__trow {
+  display: grid;
+  grid-template-columns:
+    70px
+    minmax(130px, 1.4fr)
+    minmax(100px, 1fr)
+    minmax(110px, 1fr)
+    80px
+    100px
+    minmax(110px, 1fr);
+  align-items: center; gap: 12px; padding: 11px 18px;
+  border-top: 1px solid #dde4f7; color: #1c2456; font-size: .86rem;
+  transition: background .12s;
+  text-align: center;
+}
+.bb__trow > * { display: flex; align-items: center; justify-content: center; }
+/* Keep actions right-aligned */
+.bb__trow > .bb__tacts { justify-content: flex-end; }
+.bb__trow:hover { background: #e8edf8; }
+.bb__trow--head {
+  border-top: none; background: #e8edf8; border-bottom: 1px solid #dde4f7;
+  font-weight: 700; font-size: .68rem; letter-spacing: .06em; text-transform: uppercase;
+  color: #6b7494; padding: 10px 18px;
+  text-align: center;
+}
+.bb__trow--head:hover { background: #e8edf8; }
+.bb__trow--head span { display: flex; align-items: center; justify-content: center; }
+
+/* ── Pending table: 8 columns ── */
+.bb__trow--pending {
+  grid-template-columns:
+    70px
+    minmax(120px, 1.3fr)
+    minmax(80px, .9fr)
+    85px
+    55px
+    75px
+    minmax(80px, .9fr)
+    minmax(190px, 1.4fr);
+}
+.bb__trow b     { display: block; font-size: .86rem; font-weight: 700; color: #1c2456; }
+.bb__trow small { display: block; color: #8a94b8; font-size: .75rem; margin-top: 1px; }
+
+/* Customer / student cell */
+.bb__tcustomer { display:flex; align-items:center; gap:8px; }
+.bb__avatar { width:30px; height:30px; border-radius:50%; display:grid; place-items:center; font-weight:800; font-size:.7rem; color:#1c2456; flex:none; }
+
+/* Band members & coaches cells */
+.bb__tmembers, .bb__tcoaches { display:flex; align-items:center; gap:5px; font-size:.85rem; color:#5d6385; }
+
+/* Notes cell */
+.bb__tnote { font-size:.82rem; color:#8a94b8; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+
+/* Status badge */
+.bb__badge { display:inline-flex; align-items:center; gap:5px; padding:4px 12px; border-radius:20px; font-size:.78rem; font-weight:700; }
+.bb__badge--confirmed { background:#d1fae5; color:#065f46; }
+.bb__badge--pending   { background:#fef3c7; color:#92400e; }
+.bb__badgedot { width:7px; height:7px; border-radius:50%; background:currentColor; flex:none; }
+
+/* Table actions */
+.bb__tacts { display:flex; align-items:center; gap:7px; justify-content:flex-end; }
+.bb__viewbtn {
+  display:flex; align-items:center; gap:5px;
+  padding:6px 14px; border-radius:8px; border:1px solid #dde1ef;
+  background:#fff; color:#1c2456; font:600 .8rem 'Inter',sans-serif; cursor:pointer;
+}
+.bb__viewbtn:hover { background:#f3f4f9; }
+.bb__dotbtn {
+  width:32px; height:32px; border-radius:8px; border:1px solid #dde1ef;
+  background:#fff; color:#8a94b8; cursor:pointer; display:grid; place-items:center;
+  font-size:1.1rem;
+}
+.bb__dotbtn:hover { background:#f3f4f9; color:#1c2456; }
+
+/* Pagination — below the table container, not inside it */
+.bb__pagination {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 4px; margin-top: 10px;
+}
+.bb__paginfo { font-size: .82rem; color: #8a94b8; }
+.bb__pagbtns { display: flex; align-items: center; gap: 6px; }
+.bb__pagbtn {
+  width: 30px; height: 30px; border-radius: 6px;
+  border: 1px solid #dde1ef; background: #fff;
+  color: #1c2456; font: 600 .9rem 'Inter',sans-serif;
+  cursor: pointer; display: grid; place-items: center;
+  transition: background .15s, border-color .15s;
+}
+.bb__pagbtn:hover:not(:disabled) { background: #f0f4ff; border-color: #c5cfe8; }
+.bb__pagbtn:disabled { color: #c5cbe0; cursor: default; border-color: #eaecf4; }
+
+/* ── Outer: fills remaining screen height, flex column ── */
+.bb__outer {
+  display: flex; flex-direction: column;
+  height: calc(100vh - 64px - 180px);
+  min-height: 300px;
+}
+
+/* ── Inner: light blue table, grows to fill space ── */
+.bb__inner {
+  background: #f0f4ff; border: 1px solid #dde4f7; border-radius: 8px;
+  display: flex; flex-direction: column;
+  flex: 1; overflow: hidden; min-height: 0;
+}
+.bb__innerthead { background: #e8edf8; border-bottom: 1px solid #dde4f7; flex: none; }
+.bb__innerbody {
+  flex: 1; overflow-y: auto; min-height: 0;
+  scrollbar-width: thin; scrollbar-color: #c5cfe8 #f0f4ff;
+}
+.bb__innerbody::-webkit-scrollbar { width: 5px; }
+.bb__innerbody::-webkit-scrollbar-track { background: #f0f4ff; }
+.bb__innerbody::-webkit-scrollbar-thumb { background: #c5cfe8; border-radius: 4px; }
+.bb__innerempty { display:flex; align-items:center; justify-content:center; color:#8a94b8; font-size:.88rem; padding: 40px; }
+
+/* ── Pagination: pinned to bottom of outer ── */
+.bb__pagination {
+  display: flex; align-items: center; justify-content: flex-end;
+  gap: 6px; padding: 10px 2px 0; flex: none;
+}
+.bb__paginfo { font-size: .82rem; color: #8a94b8; margin-right: auto; }
+.bb__pagbtns { display: flex; align-items: center; gap: 6px; }
+.bb__pagbtn {
+  width: 32px; height: 32px; border-radius: 7px;
+  border: 1px solid #dde1ef; background: #fff;
+  color: #1c2456; font: 600 1rem 'Inter',sans-serif;
+  cursor: pointer; display: grid; place-items: center;
+  transition: background .15s, border-color .15s;
+}
+.bb__pagbtn:hover:not(:disabled) { background: #f0f4ff; border-color: #c5cfe8; }
+.bb__pagbtn:disabled { color: #c5cbe0; cursor: default; border-color: #eaecf4; background: #fff; }
+
+/* Date chip — card style */
+.bb__datechip {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: #eef1fb; border: 1px solid #c5cfe8;
+  border-radius: 8px; padding: 5px 8px; min-width: 44px;
+  text-align: center; gap: 1px;
+}
+.bb__datechip .month { font-size: .58rem; font-weight: 700; color: #8a94b8; text-transform: uppercase; letter-spacing: .06em; }
+.bb__datechip .day   { font-size: 1.1rem; font-weight: 900; color: #1c2456; line-height: 1.1; }
+.bb__datechip .dow   { font-size: .56rem; color: #8a94b8; font-weight: 600; text-transform: uppercase; }
+
+/* Customer cell */
+.bb__tcustomer { display:flex; align-items:center; gap:8px; }
+.bb__avatar { width:30px; height:30px; border-radius:50%; display:grid; place-items:center; font-weight:800; font-size:.7rem; color:#1c2456; flex:none; }
+
+/* Band members & coaches */
+.bb__tmembers, .bb__tcoaches { display:flex; align-items:center; gap:5px; font-size:.82rem; color:#5d6385; }
+
+/* Notes */
+.bb__tnote { font-size:.8rem; color:#8a94b8; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:110px; }
+
+/* Status badges */
+.bb__badge { display:inline-flex; align-items:center; gap:5px; padding:4px 10px; border-radius:7px; font-size:.75rem; font-weight:700; border:1.5px solid transparent; }
+.bb__badge--confirmed { background:#d1fae5; color:#065f46; border-color:#a7f3d0; }
+.bb__badge--pending   { background:#fef3c7; color:#92400e; border-color:#fde68a; }
+.bb__badge--completed { background:#e0e7ff; color:#3730a3; border-color:#c7d2fe; }
+.bb__badgedot { width:6px; height:6px; border-radius:50%; background:currentColor; flex:none; }
+
+/* Table actions */
+.bb__tacts { display:flex; align-items:center; gap:6px; justify-content:flex-end; }
+.bb__viewbtn { display:flex; align-items:center; gap:5px; padding:5px 12px; border-radius:7px; border:1px solid #dde1ef; background:#fff; color:#1c2456; font:600 .78rem 'Inter',sans-serif; cursor:pointer; }
+.bb__viewbtn:hover { background:#f3f4f9; }
+.bb__dotbtn { width:30px; height:30px; border-radius:7px; border:1px solid #dde1ef; background:#fff; color:#8a94b8; cursor:pointer; display:grid; place-items:center; font-size:1rem; }
+.bb__dotbtn:hover { background:#f3f4f9; color:#1c2456; }
+
+@media(max-width:1000px){
+  .bb__outer { height:auto; }
+  .bb__inner { margin:10px; }
+  .bb__trow { min-width:820px; }
+  .bb__trow--pending { min-width:980px; }
+  .bb__grid2 { grid-template-columns:1fr; }
+  .bb__head { flex-direction:column; }
+  .bb__formgrid { grid-template-columns:1fr; }
+}
+
+/* ── Reschedule & conflict styles ── */
+.bb__btn--reschedule { color: #1c2456; border-color: #c5cfe8; background: #eef1fb; }
+.bb__btn--reschedule:hover:not(:disabled) { background: #dde4f7; }
+
+.bb__strip--conflict { background: #fff7ed; border-top: 1px solid #fed7aa; padding: 10px 18px; }
+.bb__conflictinfo { width: 100%; }
+.bb__conflicttitle { font-size: .82rem; font-weight: 700; color: #92400e; display: block; margin-bottom: 6px; }
+.bb__conflictcoaches { display: flex; flex-wrap: wrap; gap: 7px; }
+.bb__coachstatus { display: inline-flex; align-items: center; gap: 5px; font-size: .78rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
+.bb__coachstatus.free { background: #d1fae5; color: #065f46; }
+.bb__coachstatus.busy { background: #fee2e2; color: #991b1b; }
+.bb__coachdot2 { width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex: none; }
+
+.bb__strip--reschedule { background: #f0f4ff; border-top: 1px solid #c5cfe8; display: block; padding: 14px 18px; }
+.bb__strip--reschedule > b { display: block; color: #1c2456; font-size: .9rem; margin-bottom: 4px; }
+.bb__strip--reschedule > small { display: block; color: #6b7494; font-size: .8rem; margin-bottom: 12px; }
+.bb__rescheduleform { display: flex; gap: 14px; margin-bottom: 12px; flex-wrap: wrap; }
+.bb__reschedulefield { display: flex; flex-direction: column; gap: 4px; }
+.bb__reschedulefield label { font-size: .75rem; font-weight: 700; color: #3b3f55; }
+.bb__reschedulefield input,
+.bb__reschedulefield select { padding: 8px 12px; border: 1px solid #c5cfe8; border-radius: 8px; font: .85rem 'Inter',sans-serif; color: #1c2456; background: #fff; }
+.bb__reschedulefield input:focus,
+.bb__reschedulefield select:focus { outline: none; border-color: #1c2456; }
+.bb__reschedulecheck { font-size: .82rem; font-weight: 600; border-radius: 8px; padding: 9px 12px; margin-bottom: 12px; }
+.bb__reschedulecheck.ok   { background: #d1fae5; color: #065f46; }
+.bb__reschedulecheck.busy { background: #fee2e2; color: #991b1b; }
