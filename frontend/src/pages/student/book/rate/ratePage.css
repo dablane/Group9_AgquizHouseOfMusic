@@ -1,0 +1,109 @@
+.rp { padding: 28px 40px; width: 100%; box-sizing: border-box; }
+.rp h1 { font-size: 1.75rem; font-weight: 800; color: #1c2456; margin: 0; letter-spacing: -.02em; }
+.rp__sub { color: #9a9aaa; font-size: .88rem; margin: 4px 0 16px; }
+.rp__alert { background: #fee2e2; color: #991b1b; border-radius: 10px; padding: 10px 16px; font-size: .85rem; margin-bottom: 14px; }
+.rp__muted { color: #9a9aaa; font-size: .88rem; }
+
+.rp__content { display: flex; flex-direction: column; gap: 14px; width: 100%; }
+.rp__coachsection, .rp__form {
+  background: #fff; border: 1px solid #ede5d8; border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(28,36,86,.05);
+}
+.rp__coachsection { padding: 16px 20px; }
+.rp__sectionhead { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.rp__sectionhead h2 { margin: 0; color: #1c2456; font-size: .98rem; font-weight: 800; }
+.rp__sectionhead p { margin: 3px 0 0; color: #9a9aaa; font-size: .78rem; }
+.rp__remaining { color: #8a94b8; font-size: .76rem; font-weight: 600; white-space: nowrap; }
+.rp__childpicker { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.rp__childpicker span { color: #59617e; font-size: .78rem; font-weight: 700; }
+.rp__childpicker select {
+  min-width: 180px; padding: 8px 10px;
+  border: 1px solid #e8d8c4; border-radius: 8px; background: #fff;
+  color: #1c2456; font: 500 .8rem 'Inter', system-ui, sans-serif;
+}
+.rp__childpicker select:focus { outline: 2px solid #f5c842; outline-offset: 1px; }
+.rp__coachchoices { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.rp__coachchip {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 15px; border: 1px solid #e8d8c4; border-radius: 999px;
+  background: #fff; color: #1c2456; font: 700 .86rem 'Inter', system-ui, sans-serif;
+  cursor: pointer; transition: background .15s, border-color .15s, box-shadow .15s;
+}
+.rp__coachchip:hover:not(:disabled) { background: #fffdf7; border-color: #d7c8b7; }
+.rp__coachchip.on { background: #fffbe6; border-color: #f5c842; box-shadow: 0 0 0 2px rgba(245,200,66,.16); }
+.rp__coachchip:focus-visible { outline: 2px solid #1c2456; outline-offset: 2px; }
+.rp__coachchip:disabled { color: #8a94b8; cursor: default; opacity: .65; }
+.rp__coachdot { width: 9px; height: 9px; flex: none; border-radius: 50%; background: var(--coach-color); }
+
+.rp__form { padding: 20px 22px; }
+.rp__empty { margin: 0; color: #9a9aaa; font-size: .88rem; }
+.rp__lessonbanner {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 15px; margin-bottom: 12px;
+  background: #fffbe6; border: 1px solid #f5c842; border-radius: 10px;
+}
+.rp__lessonbanner--empty { position: relative; justify-content: center; min-height: 58px; padding-top: 26px; text-align: center; }
+.rp__lessonbanner--empty .rp__lessonmeta { width: 100%; align-items: center; }
+.rp__lessonbanner--empty .rp__formkicker { position: absolute; top: 12px; left: 15px; }
+.rp__lessonmeta { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.rp__formkicker { color: #9a9aaa; font-size: .67rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.rp__lessonbanner b { color: #1c2456; font-size: .9rem; }
+.rp__lessonbanner .rp__lessonplaceholder { color: #9a9aaa; font-size: .82rem; font-weight: 500; }
+.rp__lessonbanner small { color: #9a9aaa; font-size: .76rem; }
+.rp__completed { flex: none; padding: 4px 10px; border-radius: 20px; background: #d1fae5; color: #065f46; font-size: .7rem; font-weight: 700; }
+
+.rp__lessonpicker { display: flex; align-items: center; gap: 10px; margin: 0 0 14px; }
+.rp__lessonpicker span { color: #59617e; font-size: .78rem; font-weight: 700; white-space: nowrap; }
+.rp__lessonpicker select {
+  min-width: 220px; max-width: 100%; padding: 8px 10px;
+  border: 1px solid #e8d8c4; border-radius: 8px; background: #fff;
+  color: #1c2456; font: 500 .8rem 'Inter', system-ui, sans-serif;
+}
+.rp__lessonpicker select:focus { outline: 2px solid #f5c842; outline-offset: 1px; }
+
+.rp__criteria { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-bottom: 14px; }
+.rp__criterion { padding: 11px 13px; border: 1px solid #eee9df; border-radius: 10px; background: #fdfcf9; }
+.rp__critlabel { margin-bottom: 2px; color: #1c2456; font-size: .84rem; font-weight: 700; }
+.rp__crithint { margin-bottom: 6px; color: #9a9aaa; font-size: .72rem; }
+.rp__stars { display: flex; gap: 5px; }
+.rp__star { width: 27px; height: 27px; cursor: pointer; transition: transform .1s, filter .1s; }
+.rp__star:hover { transform: scale(1.16); }
+
+.rp__commentlabel { display: block; margin-bottom: 6px; color: #1c2456; font-size: .84rem; font-weight: 700; }
+.rp__commentlabel span { color: #9a9aaa; font-size: .76rem; font-weight: 500; }
+.rp__comment {
+  width: 100%; min-height: 78px; box-sizing: border-box; resize: vertical;
+  padding: 10px 12px; border: 1px solid #e8d8c4; border-radius: 9px;
+  background: #f9fafc; color: #1c2456; font: .84rem 'Inter', system-ui, sans-serif;
+}
+.rp__comment:focus { outline: none; border-color: #f5c842; box-shadow: 0 0 0 2px rgba(245,200,66,.16); }
+.rp__actions { display: flex; justify-content: flex-end; margin-top: 12px; }
+.rp__submit {
+  min-width: 190px; padding: 10px 18px; border: none; border-radius: 9px;
+  background: #f5c842; color: #1c2456; font: 700 .88rem 'Inter', system-ui, sans-serif;
+  cursor: pointer; transition: background .15s;
+}
+.rp__submit:hover:not(:disabled) { background: #e0b430; }
+.rp__submit:disabled { opacity: .5; cursor: not-allowed; }
+.rp__note { margin: 8px 0 0; color: #9a9aaa; font-size: .72rem; text-align: right; }
+.rp__success { margin-top: 10px; padding: 10px 13px; border-radius: 9px; background: #d1fae5; color: #065f46; font-size: .84rem; font-weight: 600; }
+.rp__error { margin-top: 10px; padding: 9px 12px; border-radius: 9px; background: #fee2e2; color: #991b1b; font-size: .8rem; }
+
+@media (max-width: 760px) {
+  .rp { padding: 24px 20px; }
+  .rp__coachsection, .rp__form { padding: 15px; }
+  .rp__sectionhead { align-items: flex-start; }
+}
+
+@media (max-width: 560px) {
+  .rp { padding: 20px 14px; }
+  .rp__criteria { grid-template-columns: 1fr; }
+  .rp__sectionhead { flex-direction: column; gap: 5px; }
+  .rp__childpicker { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .rp__childpicker select { width: 100%; }
+  .rp__lessonbanner { align-items: flex-start; }
+  .rp__lessonpicker { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .rp__lessonpicker select { width: 100%; min-width: 0; }
+  .rp__actions { justify-content: stretch; }
+  .rp__submit { width: 100%; }
+}
