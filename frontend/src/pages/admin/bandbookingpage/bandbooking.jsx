@@ -33,9 +33,7 @@ function Avatar({ name }) {
   return <span className="bb__avatar" style={{ background: avatarColor(name) }}>{initials(name)}</span>;
 }
 
-/* ═══════════════════════════════════════════════════
-   ADD REQUEST FORM
-═══════════════════════════════════════════════════ */
+/* ADD REQUEST FORM */
 function AddRequest({ onBack }) {
   const [params] = useSearchParams();
   const prefillDate  = params.get('date')  || '';
@@ -310,9 +308,7 @@ function AddRequest({ onBack }) {
   );
 }
 
-/* ═══════════════════════════════════════════════════
-   CONFIRMED BOOKINGS TABLE
-═══════════════════════════════════════════════════ */
+/* CONFIRMED BOOKINGS TABLE*/
 const PAGE_SIZE = 5;
 
 function Pagination({ total, page, onPage }) {
@@ -412,9 +408,7 @@ function ConfirmedTable({ bookings, loading, onCancel }) {
   );
 }
 
-/* ═══════════════════════════════════════════════════
-   PENDING TABLE
-═══════════════════════════════════════════════════ */
+/* PENDING TABLE */
 function PendingTable({ bookings, loading, onApprove, onSuggest, onDecline }) {
   const [openAction, setOpenAction]           = useState(null);
   const [rescheduleForm, setRescheduleForm]   = useState({});
@@ -632,9 +626,7 @@ function PendingTable({ bookings, loading, onApprove, onSuggest, onDecline }) {
   );
 }
 
-/* ═══════════════════════════════════════════════════
-   MAIN PAGE
-═══════════════════════════════════════════════════ */
+/* MAIN PAGE */
 export default function BandBookingsPage() {
   const [params]  = useSearchParams();
   const [subTab, setSubTab]   = useState('confirmed');
